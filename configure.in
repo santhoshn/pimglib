@@ -1,0 +1,36 @@
+dnl Process this file with autoconf to produce a configure script.
+AC_INIT(src/pimglib.h)
+AM_INIT_AUTOMAKE(pimglib,0.1)
+
+AC_CONFIG_MACRO_DIR([m4])
+
+dnl Checks for programs.
+AC_PROG_CC
+dnl AC_PROG_CPP
+dnl AC_PROG_INSTALL
+dnl AC_PROG_LN_S
+AM_PROG_LIBTOOL
+
+dnl Checks for libraries.
+
+dnl Checks for header files.
+AC_HEADER_STDC
+AC_PATH_X
+AC_PATH_XTRA
+AC_HEADER_SYS_WAIT
+AC_CHECK_HEADERS(fcntl.h sys/time.h unistd.h,,exit,)
+AC_CHECK_HEADER(jpeglib.h,,echo "*** Install libjpeg62-dev."; exit,)
+AC_CHECK_HEADER(png.h,,echo "*** Install libpng12-dev."; exit,)
+AC_CHECK_HEADER(gif_lib.h,,echo "*** Install libgif-dev."; exit,)
+AC_CHECK_HEADER(X11/xpm.h,,echo "*** Install libxpm-dev."; exit,)
+
+dnl Checks for typedefs, structures, and compiler characteristics.
+AC_C_CONST
+AC_TYPE_SIZE_T
+AC_HEADER_TIME
+
+dnl Checks for library functions.
+AC_TYPE_SIGNAL
+dnl AC_CHECK_FUNCS(gettimeofday putenv select socket strdup strtol)
+
+AC_OUTPUT(Makefile src/Makefile src/formats/Makefile)

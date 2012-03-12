@@ -1,0 +1,26 @@
+Examples to show the use of pimglib
+===================================
+
+basic
+======
+	This is a very basic example to show the use of pimglib. This shows
+the usage of the "pimg_load" and "pimg_free" functions. It shows how the 
+image can be loaded and displayed on the screen.
+
+save
+=====
+	This example shows the use of "pimg_save" function to save the image 
+in a file.
+
+zoom
+=====
+	This example shows the use of "pimg_zoom" function to zoom the image.
+
+capture
+========
+	This example shows the use of "pimg_win_img" and "pimg_win_subimg"
+functions to capture the window/pixmap contents and save it into a file.
+
+angifs
+=======
+	This example shows, how an animated GIF file can be displayed.

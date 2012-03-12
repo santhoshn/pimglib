@@ -1,0 +1,7 @@
+C library to handle various image formats written by me for the Amida Simputer. 
+This was part of OpenAlchemy released under GPL in 2006.
+
+This library provides the following functionalities:
+* Load and display images in X window system.
+* Save images in different file formats.
+* Image zoom and crop functionality.
