@@ -129,7 +129,7 @@ int main(int ac, char **av)
 	bfont = XLoadQueryFont(disp, "-picopeta-simputer-bold-r-normal--11-120-101-108-p-120-fontspecific-0");
 
 	// Create and map the window here
-	win = XCreateSimpleWindow(disp, RootWindow(disp,scr), 0, 0, 240, 270, \
+	win = XCreateSimpleWindow(disp, RootWindow(disp,scr), 0, 0, 640, 480, \
 					depth, BlackPixel(disp,scr), WhitePixel(disp,scr));
 	XSetStandardProperties(disp, win, "Photoalbum", "photoalbum", None, 0, 0, NULL);
 	XSelectInput(disp, win, ExposureMask|ButtonPressMask|ButtonReleaseMask|KeyPressMask);
@@ -141,7 +141,7 @@ int main(int ac, char **av)
 	// Get Color map
 	cmap = DefaultColormap(disp, scr);
 
-	mpix = XCreatePixmap(disp, win, 240, 270, 1);
+	mpix = XCreatePixmap(disp, win, 640, 480, 1);
 	
 	ret = pimg_load(av[1], disp, &simg, 0);
 	//ret = pimg_load(av[1], disp, &simg, SHAPE_MASK);
